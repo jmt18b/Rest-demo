@@ -1,0 +1,16 @@
+:: StoryData
+{
+    "ifid": "E8556C43-36A9-4BB5-8ED1-CFFFC2E3C61D",
+    "format": "SugarCube",
+    "format-version": "2.34.1"
+}
+:: StoryTitle
+My Story
+
+:: StoryInit
+<<set $boxroses to 0>>
+<<set $myroses to 0>>
+
+:: Start
+Welcome to the Bachelor Mansion
+[[Enter Mansion|mansion]]

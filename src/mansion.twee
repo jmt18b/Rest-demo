@@ -1,0 +1,13 @@
+:: mansion
+just opened the door
+meet the greeter, who is <<print random(22,50)>> years old
+
+Your name is Mark
+You are the bachelor
+
+:: insidemansion
+You're inside the mansion, <<print $name>>
+
+[[bedroom]]
+[[living room]]
+[[Rush to the rose ceremony|ceremony]]

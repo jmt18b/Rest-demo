@@ -1,0 +1,12 @@
+:: bedroom
+You're at the bedroom
+
+[[get a rose]]
+
+:: get a rose
+<<set $myroses += 1>>
+You just got a rose
+You now have <<print $myroses>> fries in your hand
+
+[[living room]]
+[[mansion]]

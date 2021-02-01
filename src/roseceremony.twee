@@ -1,0 +1,22 @@
+:: rose ceremony
+You're at the rose ceremony
+There's the final rose!
+You can choose the girl <<cycle "$girl">> autoselect
+<<option "Vanessa">>
+<<option "Lillian">>
+<<option "Cali">>
+<</cycle>>
+<<link "DO IT!">>
+<<if time() gt 10000>><<goto "failure">>
+<<else>><<goto "success">>
+<</if>>
+<</link>>
+
+:: failure
+you sent home your future wife!
+
+:: success
+<<timed 3s t8n>>Line 1
+<<next 3s >>Line 2
+<<next 3s >><<linkreplace "It's your future wife">>Actually, not really<</linkreplace>>
+<</timed>>

@@ -1,0 +1,18 @@
+:: living room
+<<set $boxroses += $myroses>>
+<<set $myroses to 0>>
+You're in the living room \
+<<if visited () lt 3>>
+Girls are wispering
+<</if>>
+<<if $boxroses gt 0>>
+number of fries in box: <<print $boxroses>>
+number of fries in hand: <<print $myroses>>
+<<else>>
+There are no roses in the box
+<</if>>
+<<if $boxroses gte 4>>
+The box is full. [[go to the rose ceremony|ceremony]]
+<</if>>
+
+[[bedroom]]
