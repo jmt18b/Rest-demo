@@ -1,0 +1,19 @@
+:: bathroom
+You're in the bathroom
+You have three girls to choose from for the final rose
+You can choose <<cycle "$girls" autoselect>> for the final rose
+<<option "natasha">>
+<<option "ruby">>
+<<option "chelsey">>
+<</cycle>>
+<<link "give the rose">>
+<<if time() gt 10000>><<goto "Wrong girl">>
+<<else>><<goto "Right girl">>
+<</if>>
+<</link>>
+
+:: Wrong girl
+You picked the girl you will not marry
+
+:: Right girl
+You picked a potential wife!

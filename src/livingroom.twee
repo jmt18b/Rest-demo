@@ -6,8 +6,8 @@ You're in the living room \
 Girls are wispering
 <</if>>
 <<if $boxroses gt 0>>
-number of fries in box: <<print $boxroses>>
-number of fries in hand: <<print $myroses>>
+number of roses in box: <<print $boxroses>>
+number of roses in hand: <<print $myroses>>
 <<else>>
 There are no roses in the box
 <</if>>

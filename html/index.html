@@ -98,22 +98,33 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://E8556C43-36A9-4BB5-8ED1-CFFFC2E3C61D// --><tw-storydata name="My Story" startnode="5" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="E8556C43-36A9-4BB5-8ED1-CFFFC2E3C61D" zoom="1" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="bedroom" tags="" position="100,100" size="100,100">You&#39;re at the bedroom
+	<!-- UUID://E8556C43-36A9-4BB5-8ED1-CFFFC2E3C61D// --><tw-storydata name="My Story" startnode="8" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="E8556C43-36A9-4BB5-8ED1-CFFFC2E3C61D" zoom="1" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="bathroom" tags="" position="100,100" size="100,100">You&#39;re in the bathroom
+You have three girls to choose from for the final rose
+You can choose &lt;&lt;cycle &quot;$girls&quot; autoselect&gt;&gt; for the final rose
+&lt;&lt;option &quot;natasha&quot;&gt;&gt;
+&lt;&lt;option &quot;ruby&quot;&gt;&gt;
+&lt;&lt;option &quot;chelsey&quot;&gt;&gt;
+&lt;&lt;/cycle&gt;&gt;
+&lt;&lt;link &quot;give the rose&quot;&gt;&gt;
+&lt;&lt;if time() gt 10000&gt;&gt;&lt;&lt;goto &quot;Wrong girl&quot;&gt;&gt;
+&lt;&lt;else&gt;&gt;&lt;&lt;goto &quot;Right girl&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Wrong girl" tags="" position="225,100" size="100,100">You picked the girl you will not marry</tw-passagedata><tw-passagedata pid="3" name="Right girl" tags="" position="350,100" size="100,100">You picked a potential wife!</tw-passagedata><tw-passagedata pid="4" name="bedroom" tags="" position="475,100" size="100,100">You&#39;re at the bedroom
 
-[[get a rose]]</tw-passagedata><tw-passagedata pid="2" name="get a rose" tags="" position="225,100" size="100,100">&lt;&lt;set $myroses += 1&gt;&gt;
+[[get a rose]]</tw-passagedata><tw-passagedata pid="5" name="get a rose" tags="" position="600,100" size="100,100">&lt;&lt;set $myroses += 1&gt;&gt;
 You just got a rose
 You now have &lt;&lt;print $myroses&gt;&gt; fries in your hand
 
 [[living room]]
-[[mansion]]</tw-passagedata><tw-passagedata pid="3" name="living room" tags="" position="350,100" size="100,100">&lt;&lt;set $boxroses += $myroses&gt;&gt;
+[[mansion]]</tw-passagedata><tw-passagedata pid="6" name="living room" tags="" position="725,100" size="100,100">&lt;&lt;set $boxroses += $myroses&gt;&gt;
 &lt;&lt;set $myroses to 0&gt;&gt;
 You&#39;re in the living room \
 &lt;&lt;if visited () lt 3&gt;&gt;
 Girls are wispering
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $boxroses gt 0&gt;&gt;
-number of fries in box: &lt;&lt;print $boxroses&gt;&gt;
-number of fries in hand: &lt;&lt;print $myroses&gt;&gt;
+number of roses in box: &lt;&lt;print $boxroses&gt;&gt;
+number of roses in hand: &lt;&lt;print $myroses&gt;&gt;
 &lt;&lt;else&gt;&gt;
 There are no roses in the box
 &lt;&lt;/if&gt;&gt;
@@ -121,17 +132,17 @@ There are no roses in the box
 The box is full. [[go to the rose ceremony|ceremony]]
 &lt;&lt;/if&gt;&gt;
 
-[[bedroom]]</tw-passagedata><tw-passagedata pid="4" name="StoryInit" tags="" position="475,100" size="100,100">&lt;&lt;set $boxroses to 0&gt;&gt;
-&lt;&lt;set $myroses to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Start" tags="" position="600,100" size="100,100">Welcome to the Bachelor Mansion
-[[Enter Mansion|mansion]]</tw-passagedata><tw-passagedata pid="6" name="mansion" tags="" position="725,100" size="100,100">just opened the door
+[[bedroom]]</tw-passagedata><tw-passagedata pid="7" name="StoryInit" tags="" position="850,100" size="100,100">&lt;&lt;set $boxroses to 0&gt;&gt;
+&lt;&lt;set $myroses to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Start" tags="" position="975,100" size="100,100">Welcome to the Bachelor Mansion.
+[[Enter Mansion|mansion]]</tw-passagedata><tw-passagedata pid="9" name="mansion" tags="" position="1100,100" size="100,100">just opened the door
 meet the greeter, who is &lt;&lt;print random(22,50)&gt;&gt; years old
 
 Your name is Mark
-You are the bachelor</tw-passagedata><tw-passagedata pid="7" name="insidemansion" tags="" position="850,100" size="100,100">You&#39;re inside the mansion, &lt;&lt;print $name&gt;&gt;
+You are the bachelor</tw-passagedata><tw-passagedata pid="10" name="insidemansion" tags="" position="1225,100" size="100,100">You&#39;re inside the mansion, &lt;&lt;print $name&gt;&gt;
 
 [[bedroom]]
 [[living room]]
-[[Rush to the rose ceremony|ceremony]]</tw-passagedata><tw-passagedata pid="8" name="rose ceremony" tags="" position="975,100" size="100,100">You&#39;re at the rose ceremony
+[[Rush to the rose ceremony|ceremony]]</tw-passagedata><tw-passagedata pid="11" name="rose ceremony" tags="" position="100,225" size="100,100">You&#39;re at the rose ceremony
 There&#39;s the final rose!
 You can choose the girl &lt;&lt;cycle &quot;$girl&quot;&gt;&gt; autoselect
 &lt;&lt;option &quot;Vanessa&quot;&gt;&gt;
@@ -142,7 +153,7 @@ You can choose the girl &lt;&lt;cycle &quot;$girl&quot;&gt;&gt; autoselect
 &lt;&lt;if time() gt 10000&gt;&gt;&lt;&lt;goto &quot;failure&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;goto &quot;success&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="failure" tags="" position="1100,100" size="100,100">you sent home your future wife!</tw-passagedata><tw-passagedata pid="10" name="success" tags="" position="1225,100" size="100,100">&lt;&lt;timed 3s t8n&gt;&gt;Line 1
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="failure" tags="" position="225,225" size="100,100">you sent home your future wife!</tw-passagedata><tw-passagedata pid="13" name="success" tags="" position="350,225" size="100,100">&lt;&lt;timed 3s t8n&gt;&gt;Line 1
 &lt;&lt;next 3s &gt;&gt;Line 2
 &lt;&lt;next 3s &gt;&gt;&lt;&lt;linkreplace &quot;It&#39;s your future wife&quot;&gt;&gt;Actually, not really&lt;&lt;/linkreplace&gt;&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata></tw-storydata>
